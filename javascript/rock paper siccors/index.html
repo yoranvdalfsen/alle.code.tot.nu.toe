@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock-Paper-Scissors Game</title>
+    <style>
+      #scoreboard {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        font-size: 24px;
+      }
+      #player-score, #computer-score {
+        margin: 0 20px;
+      }
+      button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 10px;
+      }
+      #result {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rock-Paper-Scissors Game</h1>
+    <div id="scoreboard">
+      <div id="player-score">Player: 0</div>
+      <div id="computer-score">Computer: 0</div>
+    </div>
+    <button onclick="play('rock')">Rock</button>
+    <button onclick="play('paper')">Paper</button>
+    <button onclick="play('scissors')">Scissors</button>
+    <div id="result"></div>
+    <script>
+      let playerScore = 0;
+      let computerScore = 0;
+      function play(playerChoice) {
+        const choices = ['rock', 'paper', 'scissors'];
+        const computerChoice = choices[Math.floor(Math.random() * 3)];
+        let result;
+        if (playerChoice === 'rock' && computerChoice === 'scissors' || playerChoice === 'paper' && computerChoice === 'rock' || playerChoice === 'scissors' && computerChoice === 'paper') {
+          result = 'You Win!';
+          playerScore++;
+        } else if (playerChoice === computerChoice) {
+          result = 'Tie!';
+        } else {
+          result = 'Computer Wins!';
+          computerScore++;
+        }
+        document.getElementById('player-score').innerText = `Player: ${playerScore}`;
+        document.getElementById('computer-score').innerText = `Computer: ${computerScore}`;
+        document.getElementById('result').innerText = `You chose ${playerChoice}, computer chose ${computerChoice}. ${result}`;
+      }
+    </script>
+  </body>
+</html>
+
+

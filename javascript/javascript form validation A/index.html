@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <h1> Test formulier</h1>
+<form name="myForm"  onsubmit="return validateForm()" >
+    *naam:<input type="text" id="vnaam" placeholder="voornaam"  name="vnaam" onblur="checkvnaam()">
+    <input type="text" id="tv" placeholder="tv" name="tv">
+    <input type="text" id="anaam" placeholder="achternaam"  name="anaam" onblur="checkanaam()"> 
+    <span id="ErrorvNaam"> </span>
+    <span id="ErroraNaam"> </span><br>
+
+    *adres:<input type="text" id="adres" placeholder="adres" name="adres"> <br>
+    *PC Plaats:<input type="text" id="pc" placeholder="pc" name="pc"onblur="checkpc()">
+    <span id="Errorpc"></span>  *
+    <input type="text" id="plaats" placeholder="plaats" name="plaats"> <br>
+    telefoon:<input type="number" id="telefoon" placeholder="telefoon"> <br>
+    email: <input type="email" id="email" placeholder="email"> <br>
+    geslacht: <input type="radio" id="geslachtM" name="geslacht">man    
+    <input type="radio" id="geslachtV" name="geslacht">vrouw 
+    <input type="radio" id="geslachtX" name="geslacht"> X <br>
+
+    boyband <select name="boyband" id="boyband">
+        <option value="start leeg">---</option>
+      <option value="mainstreet">mainstreet</option>
+      <option value="k3 boys">k3 boys</option>
+      <option value="one direction">one direction</option>
+      <option value="backstreet boys">backstreet boys</option>
+</select>
+<br>
+geb.datum <input type="date" id="gebdatum" > <br>
+*verplichte velden<input type="submit" value="Submit" >
+
+</form>
+
+
+
+</body>
+
+</html>

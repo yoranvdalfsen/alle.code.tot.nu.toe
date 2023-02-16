@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Heads or Tails Game</title>
+</head>
+<body>
+	<h1>kop of munt</h1>
+	<p>druk om een muntje op te gooien</p>
+	<button onclick="flipCoin()">Flip Coin</button>
+	<br><br>
+	<h2 id="result"></h2>
+	<script>
+		function flipCoin() {
+			var result = Math.random();
+			if (result < 0.5) {
+				document.getElementById("result").innerHTML = "kop";
+               
+			} else {
+				document.getElementById("result").innerHTML = "munt";
+			}
+		}
+	</script>
+</body>
+</html>
